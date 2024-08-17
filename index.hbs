@@ -13,7 +13,12 @@
                             <h2 class="gh-article-title gh-card-title">{{title}}</h2>
                         </header>
 
-                        <p class="gh-article-excerpt">{{excerpt}}</p>
+                        {{!-- Check if the post is tagged with "Adult" --}}
+                        {{#has tag="Adult"}}
+                            <p class="gh-article-excerpt">This post has adult content. Click through to read this post.</p>
+                        {{else}}
+                            <p class="gh-article-excerpt">{{excerpt}}...</p>
+                        {{/has}}
 
                         <footer class="gh-card-meta">
                             <span class="gh-card-duration">{{reading_time}}</span>
