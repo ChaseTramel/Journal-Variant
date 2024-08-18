@@ -8,7 +8,19 @@
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
 
     {{ghost_head}}
+
+    {{!-- Conditional check for Adult tag --}}
+    {{#has tag="adult"}}
+        <meta property="og:description" content="This post has adult content. Click through to read this post.">
+        <meta name="description" content="This post has adult content. Click through to read this post.">
+    {{else}}
+        <meta property="og:description" content="{{meta_description}}">
+        <meta name="description" content="{{meta_description}}">
+    {{/has}}
+
+    {{!-- Other meta tags --}}
 </head>
+
 
 <body class="{{body_class}} is-head-{{#match @custom.navigation_layout "Logo on the left"}}left-logo{{else match @custom.navigation_layout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}">
 <div class="gh-site">
