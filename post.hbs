@@ -4,6 +4,8 @@
 
 <!-- Set your tag directly in the #has helper -->
 {{#has tag="Adult"}}
+<!-- Custom meta description for social preview -->
+<meta name="description" content="This post has adult content. Click through to read this post.">
 <!-- Age gate overlay container -->
 <div id="age-gate-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.99); color: rgb(0, 0, 0); display: flex; justify-content: center; align-items: center; z-index: 9999; font-family: Arial, sans-serif; padding: 20px;">
 
@@ -71,6 +73,8 @@
 </style>
 {{/has}}
 
+
+
 <main id="gh-main" class="gh-main">
     <article class="gh-article {{post_class}}">
 
@@ -127,7 +131,6 @@
                 </div>
             </nav>
         </footer>
-
     </article>
 </main>
 

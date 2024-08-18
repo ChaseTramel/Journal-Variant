@@ -8,17 +8,6 @@
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
 
     {{ghost_head}}
-
-    {{!-- Conditional check for Adult tag --}}
-    {{#has tag="adult"}}
-        <meta property="og:description" content="This post has adult content. Click through to read this post.">
-        <meta name="description" content="This post has adult content. Click through to read this post.">
-    {{else}}
-        <meta property="og:description" content="{{meta_description}}">
-        <meta name="description" content="{{meta_description}}">
-    {{/has}}
-
-    {{!-- Other meta tags --}}
 </head>
 
 
